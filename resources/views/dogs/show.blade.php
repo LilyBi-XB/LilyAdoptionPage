@@ -9,7 +9,7 @@
                     <h2>Apply now</h2>
                 </div>
                 <ul class="style2">
-                    <form method="POST" action="/dog/{id}">
+                    <form method="POST" action="/application">
                         @csrf
                         <div class="field">
                             <label class="label" for="name">Name</label>
@@ -37,6 +37,10 @@
                             </div>
                         </div>
                         <br>
+
+                        <div class="field">
+                            <input type="hidden" id="dog_name" name="dog_name" value={{$dogs->name}}>
+                        </div>
 
                         <div class="field is-grouped">
                             <div class="control">

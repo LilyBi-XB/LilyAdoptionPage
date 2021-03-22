@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Application extends Model
 {
     use HasFactory;
-    protected $fillable=['name','email','experience'];
+    protected $fillable=['name','email','experience','dog_name'];
     public $timestamps = false;
 }

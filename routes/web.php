@@ -13,19 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',function () {
-    return view('Dogs.index');
-});
 
-Route::get('/application',function () {
-    return view('application');
-});
 
 Route::get('/','App\Http\Controllers\DogsController@index');
 Route::get('/dog/{id}','App\Http\Controllers\DogsController@show');
 
-Route::post('/dog/{id}','App\Http\Controllers\ApplicationsController@store');
+Route::post('/application','App\Http\Controllers\ApplicationsController@store');
 
-Route::post('/application','App\Http\Controllers\ApplicationsController@edit');
-Route::put('/application','App\Http\Controllers\ApplicationsController@update');
+
+Route::get('/application','App\Http\Controllers\ApplicationsController@index');
+Route::delete('/application/{id}','App\Http\Controllers\ApplicationsController@destroy');
+Route::get('/application/{id}','App\Http\Controllers\ApplicationsController@edit');
+Route::put('/application/{id}','App\Http\Controllers\ApplicationsController@update');
 

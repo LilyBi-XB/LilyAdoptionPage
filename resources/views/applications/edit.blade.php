@@ -9,52 +9,43 @@
                     <h2>update details</h2>
                 </div>
                 <ul class="style2">
-                    <form method="POST" action="/application">
+                    <form method="POST" action="/application/{{$application->id}}">
                         @csrf
                         @method('PUT')
                         <div class="field">
-                            <label class="label" for="name">The pet you'd like to adopt</label>
-
+                            <label class="label" for="name">The dog you'd like to adopt</label>
                             <div class="control">
-                                <select name="dogName" id="dogName">
-                                    <option value="1">Gino</option>
-                                    <option value="2">Bebe</option>
-                                    <option value="3">Nidge</option>
-                                    <option value="4">Buddy</option>
-                                </select>
+{{--                                <input class="input" type="text" name="dog_name" id="dog_name">--}}
+                                <input class="input" type="text" name="dog_name" id="dog_name" value="{{$application->dog_name}}">
                             </div>
-                        </div>
-                        <br>
+                        </div> <br>
 
                         <div class="field">
                             <label class="label" for="name">Name</label>
 
                             <div class="control">
-                                <input class="input" type="text" name="name" id="name">
-{{--                                <input class="input" type="text" name="name" id="name" value="{{$application->name}}">--}}
+{{--                                <input class="input" type="text" name="name" id="name">--}}
+                                <input class="input" type="text" name="name" id="name" value="{{$application->name}}">
                             </div>
-                        </div>
-                        <br>
+                        </div> <br>
 
                         <div class="field">
                             <label class="label" for="email">Email</label>
 
                             <div class="control">
-                                <input class="input" type="text" name="email" id="email">
-{{--                                <input class="input" type="text" name="email" id="email" value="{{$application->email}}">--}}
+{{--                                <input class="input" type="text" name="email" id="email">--}}
+                                <input class="input" type="text" name="email" id="email" value="{{$application->email}}">
                             </div>
-                        </div>
-                        <br>
+                        </div> <br>
 
                         <div class="field">
                             <label class="label" for="experience"> Your experience with dogs</label>
 
                             <div class="control">
-                                <textarea class="textarea"  name="experience" id="experience"></textarea>
-{{--                                <textarea class="textarea"  name="experience" id="experience" value="{{$application->experience}}"></textarea>--}}
+{{--                                <textarea class="textarea"  name="experience" id="experience"></textarea>--}}
+                                <input class="textarea"  name="experience" id="experience" value="{{$application->experience}}"></input>
                             </div>
-                        </div>
-                        <br>
+                        </div><br>
 
                         <div class="field is-grouped">
                             <div class="control">

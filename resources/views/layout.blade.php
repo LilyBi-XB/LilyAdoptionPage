@@ -27,7 +27,7 @@
         <div id="menu" class="container">
             <ul>
                 <li class= {{Request::is('/')?'current_page_item':''}} ><a href="/">Our animals</a></li>
-                <li class= {{Request::is('/application')?'current_page_item':''}}><a href="/application">Current Application</a></li>
+                <li class= {{Request::is('/application')?'current_page_item':''}}><a href="/application">Current Applications</a></li>
             </ul>
         </div>
         <!-- end #menu -->
